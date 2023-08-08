@@ -6317,7 +6317,7 @@ __metadata:
   bin:
     asc: bin/asc
     asinit: bin/asinit
-  checksum: 8a407db6179addfaa5fcc637543a755ecc22ae8dd5e8259492305afd0d2bb73eae019d4178f79b515f75648d71dfda2c1ceb0c7421bff7817aebb2e2f5c8bfe7
+  checksum: 08fde3fd50e3c67c2e057c83963f65f9f4a710380b6040727fd87b3a162795c498de603a3bc68ceb1da7ec4b5e31e9d61ec6ea961a0ba228b91584f18c197e98
   languageName: node
   linkType: hard
 
