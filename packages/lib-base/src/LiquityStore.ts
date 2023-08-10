@@ -586,6 +586,7 @@ export abstract class LiquityStore<T = unknown> {
   ): void {
     assert(this._baseState && this._derivedState);
 
+    console.log('_update', this.state);
     const oldState = this.state;
 
     if (baseStateUpdate) {

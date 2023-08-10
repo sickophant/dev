@@ -219,7 +219,12 @@ const getAbi = (priceFeedIsTestnet: boolean, uniTokenIsMock: boolean): LiquityCo
   gasPool: gasPoolAbi,
   collSurplusPool: collSurplusPoolAbi,
   unipool: unipoolAbi,
-  uniToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi
+  uniToken: uniTokenIsMock ? erc20MockAbi : iERC20Abi,
+  // temp placehoder ABIs
+  //minichef: erc20MockAbi,
+  //lpRevShareStaking: erc20MockAbi,
+  //TEST_INVESTOR_A: erc20MockAbi,
+  //mockAggregator: erc20MockAbi 
 });
 
 const mapLiquityContracts = <T, U>(
@@ -251,7 +256,7 @@ export const _connectToContracts = (
   { addresses, _priceFeedIsTestnet, _uniTokenIsMock }: _LiquityDeploymentJSON
 ): _LiquityContracts => {
   const abi = getAbi(_priceFeedIsTestnet, _uniTokenIsMock);
-
+  console.error('addresses', addresses);
   return mapLiquityContracts(
     addresses,
     (address, key) =>

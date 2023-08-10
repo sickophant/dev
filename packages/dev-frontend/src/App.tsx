@@ -1,6 +1,8 @@
 import React from "react";
+import { base_goerli } from "./chains"
 import { createClient, WagmiConfig } from "wagmi";
 import { mainnet, goerli, localhost } from "wagmi/chains";
+
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
 import { Flex, Heading, ThemeProvider, Paragraph, Link } from "theme-ui";
 
@@ -94,7 +96,7 @@ const App = () => {
                   ? [localhost]
                   : config.value.testnetOnly
                   ? [goerli]
-                  : [mainnet, goerli],
+                  : [mainnet, goerli, base_goerli],
               walletConnectProjectId: config.value.walletConnectProjectId,
               infuraId: config.value.infuraApiKey,
               alchemyId: config.value.alchemyApiKey

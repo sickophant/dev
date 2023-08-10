@@ -64,6 +64,7 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
   constructor(readable: ReadableEthersLiquity) {
     super();
 
+    console.log('readable', readable);
     this.connection = readable.connection;
     this._readable = readable;
     this._provider = _getProvider(readable.connection);
@@ -89,6 +90,7 @@ export class BlockPolledLiquityStore extends LiquityStore<BlockPolledLiquityStor
   ): Promise<[baseState: LiquityStoreBaseState, extraState: BlockPolledLiquityStoreExtraState]> {
     const { userAddress, frontendTag } = this.connection;
 
+    console.log('_get', userAddress, blockTag);
     const {
       blockTimestamp,
       _feesFactory,
